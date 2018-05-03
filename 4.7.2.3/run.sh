@@ -7,5 +7,5 @@ docker run -ti \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /home/radek/Downloads:/Downloads \
     -e DISPLAY=:1 \
-    kmymoney:5.0.1 \
-    /bin/bash
+    kmymoney:4.7.2.3 \
+    kmymoney
