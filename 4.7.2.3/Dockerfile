@@ -1,5 +1,11 @@
 FROM opensuse:42.1
-RUN zypper --non-interactive install kmymoney
-RUN zypper --non-interactive install kde-oxygen-fonts oxygen-icon-theme-scalable
+
+RUN zypper --non-interactive install \
+    kmymoney \
+    kde-oxygen-fonts \
+    oxygen-icon-theme
+
 ENV QT_GRAPHICSSYSTEM="native"
-CMD kmymoney
+ADD start-kmymoney.sh /
+
+CMD ["/bin/sh", "/start-kmymoney.sh"]
